@@ -1,8 +1,146 @@
-.attribution {
-    font-size: 11px;
+@font-face {
+    font-family: 'RalewayRegular';
+    src: url('fonts/RalewayRegular.eot');
+    src: url('fonts/RalewayRegular.eot') format('embedded-opentype'), url('fonts/RalewayRegular.woff2') format('woff2'), url('fonts/RalewayRegular.woff') format('woff'), url('fonts/RalewayRegular.ttf') format('truetype'), url('fonts/RalewayRegular.svg#RalewayRegular') format('svg');
+}
+
+@font-face {
+    font-family: 'RalewayBold';
+    src: url('fonts/RalewayBold.eot');
+    src: url('fonts/RalewayBold.eot') format('embedded-opentype'), url('fonts/RalewayBold.woff2') format('woff2'), url('fonts/RalewayBold.woff') format('woff'), url('fonts/RalewayBold.ttf') format('truetype'), url('fonts/RalewayBold.svg#RalewayBold') format('svg');
+}
+
+@font-face {
+    font-family: 'OpenSansRegular';
+    src: url('fonts/OpenSansRegular.eot');
+    src: url('fonts/OpenSansRegular.eot') format('embedded-opentype'), url('fonts/OpenSansRegular.woff2') format('woff2'), url('fonts/OpenSansRegular.woff') format('woff'), url('fonts/OpenSansRegular.ttf') format('truetype'), url('fonts/OpenSansRegular.svg#OpenSansRegular') format('svg');
+}
+
+:root {
+    --dark-blue: hsl(243, 87%, 12%);
+    --desaturated-blue: hsl(238, 22%, 44%);
+    --bright-blue: hsl(224, 93%, 58%);
+    --moderate-cyan: hsl(170, 45%, 43%);
+    --grayish-blue: hsl(240, 75%, 98%);
+    --light-gray: hsl(0, 0%, 75%);
+    --max-width: 1440px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.width {
+    max-width: var(--max-width);
+    margin: auto;
+}
+
+h1,
+h2,
+h3,
+button {
+    font-family: 'RalewayBold';
+}
+
+input[placeholder] {
+    font-family: 'RalewayRegular';
+}
+
+p {
+    font-family: 'OpenSansRegular';
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    font-family: 'OpenSansRegular';
+    text-decoration: none;
+    color: black;
+}
+
+header>nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    max-width: 5rem;
+    max-height: 2rem;
+    margin-left: .5rem;
+}
+
+header ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+header li {
+    margin-right: 1rem;
+}
+
+main {
+    margin: auto;
     text-align: center;
 }
 
-.attribution a {
-    color: hsl(228, 45%, 44%);
+.files {
+    max-width: 90%;
+    margin: auto;
+}
+
+.files {
+    margin-bottom: 2rem;
+}
+
+.width>div {
+    margin-top: 4rem;
+}
+
+.width div img {
+    max-width: 20rem;
+    margin: .25rem 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="email"] {
+    margin: 1rem auto;
+    padding: .5rem 1rem;
+    width: 90%;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: .25rem;
+}
+
+button {
+    background-color: var(--bright-blue);
+    color: var(--grayish-blue);
+    width: 90%;
+    height: 40px;
+    margin: auto;
+    padding: .5rem 1rem;
+    border: none;
+    border-radius: .25rem;
+}
+
+.pro {
+    background: url(images/bg-curve-mobile.svg) no-repeat;
+    padding-top: 3.3rem;
+}
+
+.productive {
+    background-color: var(--grayish-blue);
 }
