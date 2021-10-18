@@ -32,13 +32,19 @@
     box-sizing: border-box;
 }
 
-body {
-    margin: 0;
-}
+
+/* limit overgrowth*/
 
 .width {
     max-width: var(--max-width);
     margin: auto;
+}
+
+
+/* Base styles*/
+
+body {
+    margin: 0;
 }
 
 h1,
@@ -65,6 +71,9 @@ a {
     font-family: 'OpenSansRegular';
     text-decoration: none;
 }
+
+
+/* Header styles*/
 
 header a {
     color: black;
@@ -103,9 +112,6 @@ main {
 .files {
     max-width: 90%;
     margin: auto;
-}
-
-.files {
     margin-bottom: 2rem;
 }
 
@@ -156,6 +162,7 @@ button {
 
 .productive {
     background-color: var(--grayish-blue);
+    padding-top: 1rem;
 }
 
 .productive>div {
@@ -243,11 +250,8 @@ span>p {
     width: 80%;
 }
 
-footer {
-    background-color: var(--dark-blue);
-}
-
 .foot {
+    background-color: var(--dark-blue);
     padding: 3.5rem 2.5rem;
     color: var(--grayish-blue);
 }
@@ -294,4 +298,135 @@ footer {
     text-decoration: none;
     outline: none;
     text-align: center;
+}
+
+
+/* Hover states*/
+
+button:hover {
+    cursor: pointer;
+    background-color: hsl(224, 93%, 58%, .6);
+}
+
+header a:hover,
+.foot a:hover {
+    color: hsl(224, 93%, 68%);
+    border-color: hsl(224, 93%, 68%);
+}
+
+.productive a:hover {
+    filter: brightness(1.4);
+}
+
+@media screen and (min-width: 376px) {
+    .pro {
+        background: url(images/bg-curve-desktop.svg) no-repeat;
+        background-size: 100%;
+    }
+}
+
+
+/* Desktop view*/
+
+@media screen and (min-width: 1000px) {
+    h1,
+    h2,
+    h3,
+    p {
+        text-align: left;
+    }
+    nav.width {
+        padding: 2rem 5%;
+    }
+    header img {
+        max-width: 8rem;
+        max-height: 3rem;
+        margin-top: .5rem;
+    }
+    header ul {
+        column-gap: 1.5rem;
+    }
+    .files {
+        max-width: 100%;
+    }
+    .files>div {
+        margin-left: 10%;
+    }
+    .width>div {
+        padding-top: 2rem;
+    }
+    .width div img {
+        max-width: 27rem;
+    }
+    .reverse {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        place-items: center;
+        column-gap: 2rem;
+    }
+    .reverse>img {
+        grid-column: 2/3;
+        grid-row: 1;
+    }
+    .reverse>div {
+        grid-column: 1/2;
+        grid-row: 1;
+    }
+    .files form {
+        flex-direction: row;
+    }
+    .files input[type="email"] {
+        margin: 1rem 0;
+        width: 55%;
+    }
+    button {
+        width: 40%;
+    }
+    .productive>div {
+        margin-left: 10%;
+        padding: 1.5rem 0;
+    }
+    .productive a {
+        margin: 0;
+    }
+    .productive aside {
+        margin: 2rem 0;
+        max-width: 65%;
+    }
+    .access {
+        display: flex;
+        align-items: center;
+        column-gap: 5rem;
+        padding: 4rem 5%;
+    }
+    .access>* {
+        width: 100%;
+        margin: 0;
+        padding-top: 1rem;
+    }
+    .access form {
+        width: 100%;
+    }
+    .access form>* {
+        margin: .5rem 0;
+    }
+    .access button {
+        width: 50%;
+    }
+    .foot {
+        padding: 3.5rem 5%;
+    }
+    .Fnav {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+    }
+    .Fnav::after {
+        content: "";
+        display: inline;
+    }
+    .foot ul {
+        margin: 0;
+    }
 }
