@@ -200,11 +200,11 @@ aside .founder>img {
     margin-right: .5rem;
 }
 
-.founder span * {
+.founder div * {
     margin: .25rem;
 }
 
-span>p {
+.founder div>p {
     font-size: .6rem;
 }
 
