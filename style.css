@@ -104,6 +104,9 @@ header li {
     margin-right: 1rem;
 }
 
+
+/* Main styles*/
+
 main {
     margin: auto;
     text-align: center;
@@ -122,36 +125,6 @@ main {
 .width div img {
     max-width: 20rem;
     margin: .25rem 0;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-input[type="email"] {
-    margin: 1rem auto;
-    padding: .5rem 1rem;
-    width: 90%;
-    height: 40px;
-    border: 1px solid black;
-    border-radius: .25rem;
-}
-
-input::placeholder {
-    opacity: .5;
-}
-
-button {
-    background-color: var(--bright-blue);
-    color: var(--grayish-blue);
-    width: 90%;
-    height: 40px;
-    margin: auto;
-    padding: .5rem 1rem;
-    border: none;
-    border-radius: .25rem;
-    box-shadow: 0 3px 10px hsl(243, 87%, 12%, .2);
 }
 
 .pro {
@@ -250,6 +223,9 @@ span>p {
     width: 80%;
 }
 
+
+/* Footer styles*/
+
 .foot {
     background-color: var(--dark-blue);
     padding: 3.5rem 2.5rem;
@@ -298,6 +274,49 @@ span>p {
     text-decoration: none;
     outline: none;
     text-align: center;
+}
+
+
+/*.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}*/
+
+
+/* Form styles*/
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="email"] {
+    margin: 1rem auto;
+    padding: .5rem 1rem;
+    width: 90%;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: .25rem;
+}
+
+input::placeholder {
+    opacity: .5;
+}
+
+button {
+    background-color: var(--bright-blue);
+    color: var(--grayish-blue);
+    width: 90%;
+    height: 40px;
+    margin: auto;
+    padding: .5rem 1rem;
+    border: none;
+    border-radius: .25rem;
+    box-shadow: 0 3px 10px hsl(243, 87%, 12%, .2);
 }
 
 
