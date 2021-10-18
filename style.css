@@ -319,6 +319,19 @@ button {
     box-shadow: 0 3px 10px hsl(243, 87%, 12%, .2);
 }
 
+input:not(:focus):not(:placeholder-shown):invalid {
+    border-color: red;
+}
+
+
+/*input:user-invalid {
+    border-color: red;
+}
+
+input:-moz-ui-invalid {
+    border-color: red;
+}*/
+
 
 /* Hover states*/
 
