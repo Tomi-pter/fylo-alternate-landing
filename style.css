@@ -337,15 +337,15 @@ header a:hover,
     filter: brightness(1.4);
 }
 
+
+/* Desktop view*/
+
 @media screen and (min-width: 376px) {
     .pro {
         background: url(images/bg-curve-desktop.svg) no-repeat;
         background-size: 100%;
     }
 }
-
-
-/* Desktop view*/
 
 @media screen and (min-width: 1000px) {
     h1,
