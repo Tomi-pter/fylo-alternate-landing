@@ -401,6 +401,9 @@ header a:hover,
     button {
         width: 40%;
     }
+    .pro {
+        padding-top: 4.3rem;
+    }
     .productive>div {
         margin-left: 10%;
         padding: 1.5rem 0;
