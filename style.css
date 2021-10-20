@@ -355,8 +355,8 @@ header a:hover,
 
 @media screen and (min-width: 376px) {
     .pro {
-        background: url(images/bg-curve-desktop.svg) no-repeat;
-        background-size: 100% 10vh;
+        background: url(images/bg-curve-desktop.svg) no-repeat top;
+        background-size: 100% 12.5%;
         padding-top: 4.3rem;
     }
 }
