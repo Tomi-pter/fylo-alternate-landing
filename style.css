@@ -357,6 +357,8 @@ header a:hover,
     .pro {
         background: url(images/bg-curve-desktop.svg) no-repeat;
         background-size: 100%;
+        background-size: 100% 10vh;
+        padding-top: 5.3rem;
     }
 }
 
