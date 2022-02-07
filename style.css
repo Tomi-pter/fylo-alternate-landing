@@ -292,6 +292,7 @@ aside .founder>img {
 form {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
 }
 
 input[type="email"] {
@@ -321,6 +322,14 @@ button {
 
 input:not(:focus):not(:placeholder-shown):invalid {
     border-color: red;
+}
+
+.validity {
+    font-size: .75rem;
+    font-family: 'RalewayBold';
+    display: block;
+    padding: 1rem 0;
+    color: red;
 }
 
 
@@ -464,5 +473,9 @@ header a:hover,
     }
     .foot ul {
         margin: 0;
+    }
+    .validity {
+        padding: 0;
+        text-align: left;
     }
 }

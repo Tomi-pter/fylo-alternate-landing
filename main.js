@@ -1,43 +1,41 @@
-const form = document.getElementsByTagName('form')[0];
+const input = document.querySelectorAll("input");
+const btn = document.querySelectorAll("button");
+const span = document.querySelectorAll(".validity");
 
-const email = document.getElementById('mail');
-const emailError = document.querySelector('#mail + span.error');
+const inputArr = Array.from(input);
+const spanArr = Array.from(span);
+const btnArr = Array.from(btn);
+console.log(btnArr);
 
-email.addEventListener('input', function(event) {
+inputArr[0].addEventListener("input", validateInput1);
+inputArr[1].addEventListener("input", validateInput2);
+btnArr[0].addEventListener("click", submit);
+btnArr[1].addEventListener("click", submit);
 
-    if (email.validity.valid) {
-        // In case there is an error message visible, if the field
-        // is valid, we remove the error message.
-        emailError.textContent = ''; // Reset the content of the message
-        emailError.className = 'error'; // Reset the visual state of the message
+function validateInput1() {
+    if (inputArr[0].validity.typeMismatch) {
+        spanArr[0].textContent = "Please provide a valid email";
+    } else if (inputArr[0].value.length === 0) {
+        spanArr[0].textContent = "Please input your email";
     } else {
-        // If there is still an error, show the correct error
-        showError();
+        spanArr[0].textContent = "";
+        return true;
     }
-});
+}
 
-form.addEventListener('submit', function(event) {
-    // if the email field is valid, we let the form submit
-
-    if (!email.validity.valid) {
-        // If it isn't, we display an appropriate error message
-        showError();
-        // Then we prevent the form from being sent by canceling the event
-        event.preventDefault();
+function validateInput2() {
+    if (inputArr[1].validity.typeMismatch) {
+        spanArr[1].textContent = "Please provide a valid email";
+    } else if (inputArr[1].value.length === 0) {
+        spanArr[1].textContent = "Please input your email";
+    } else {
+        spanArr[1].textContent = "";
+        return true;
     }
-});
+}
 
-function showError() {
-    if (email.validity.valueMissing) {
-        // If the field is empty,
-        // display the following error message.
-        emailError.textContent = 'You need to enter an e-mail address.';
-    } else if (email.validity.typeMismatch) {
-        // If the field doesn't contain an email address,
-        // display the following error message.
-        emailError.textContent = 'Please check your email';
+function submit(e) {
+    if (!validateInput1() && !validateInput2()) {
+        e.preventDefault();
     }
-
-    // Set the styling appropriately
-    emailError.className = 'error active';
 }
